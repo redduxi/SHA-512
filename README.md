@@ -7,13 +7,13 @@ C++ Implementation of SHA-512 and SHA-384 hashing algorithm
 ## Usage
 
 ```c++
-#include "SHA512.h"
+#include "SHA512CryptoServiceProvider.h"
 ////
 SHA512CryptoServiceProvider s;
 string hash = s.Hashing("a");
 ```
 ```c++
-#include "SHA384.h"
+#include "SHA384CryptoServiceProvider.h"
 ////
 SHA384CryptoServiceProvider s;
 string hash = s.Hashing("a");
