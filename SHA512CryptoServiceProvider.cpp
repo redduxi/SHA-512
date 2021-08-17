@@ -131,8 +131,12 @@ void SHA512CryptoServiceProvider::ProcessBlock(const int64 *Message, int64 *H)
 */
 std::string SHA512CryptoServiceProvider::Hashing(std::string inputMessage)
 {
-    const char* mess = inputMessage.c_str();
-    int inputMessageLength = strlen(mess);
+    const char* mess;
+    int inputMessageLength = inputMessage.length();
+    for (int i = 0; i < inputMessageLength; i++)
+    {
+        mess += inputMessage[i];
+    }
 
     int64 intermediateLength, K, messageLength;
 
